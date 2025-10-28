@@ -1,4 +1,4 @@
-<img width="1325" height="630" alt="Screenshot 2025-10-28 095519" src="https://github.com/user-attachments/assets/ce4dee71-8a35-44ae-be8c-a3f00596b73b" /># 🛍️ Forever – Full Stack E-commerce Website (MERN)
+# 🛍️ Forever – Full Stack E-commerce Website (MERN)
 
 This project is a fully functional **e-commerce website** built using the **MERN (MongoDB, Express, React, Node.js)** stack.  
 It features **user authentication**, **product management**, **shopping cart**, **order placement**, and **payment gateway integration**.  
@@ -60,7 +60,6 @@ The **admin dashboard** allows efficient store management, including **order tra
 <img width="1322" height="629" alt="Screenshot 2025-10-28 100403" src="https://github.com/user-attachments/assets/29e9e36e-36d4-492d-9c0b-0206bf666ccd" />
 <img width="1319" height="626" alt="Screenshot 2025-10-28 100527" src="https://github.com/user-attachments/assets/336c9ab8-8417-45dd-856a-85dfbb0f9a3e" />
 <img width="1312" height="619" alt="Screenshot 2025-10-28 100644" src="https://github.com/user-attachments/assets/5711a1bc-4496-4543-aa98-e069e953d1f0" />
-<img width="700" height="327" alt="tic toc" src="https://github.com/user-attachments/assets/ab775dcf-2c63-42a8-aac1-d7884f37b45b" />
 <img width="1322" height="634" alt="Screenshot 2025-10-28 100708" src="https://github.com/user-attachments/assets/6d746b40-bbbc-4085-9294-bd359dfdea7c" />
 
 
