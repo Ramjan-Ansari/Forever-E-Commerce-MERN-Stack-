@@ -30,7 +30,7 @@ const Verify = () => {
 
     useEffect(()=>{
         verifyPayment();
-    },token)
+    },[token])
   return (
     <div>Verify</div>
   )

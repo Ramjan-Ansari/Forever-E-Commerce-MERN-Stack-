@@ -16,6 +16,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Contact from './pages/Contact.jsx'
 import Verify from './pages/Verify.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
        <ToastContainer />
        <Navbar />
        <Searchbar />
+       <ScrollToTop />
        <Routes>
         <Route path='/' element={ <Home/> } />
         <Route path='/collection' element={ <Collection /> } />
@@ -34,6 +37,7 @@ const App = () => {
         <Route path='/place-order' element={ <Placeorder /> } />
         <Route path='/orders' element={ <Order /> } />
         <Route path='/verify' element={ <Verify /> } />
+        <Route path='*' element={ <NotFound /> } />
        </Routes>
        <Footer />
     </div>

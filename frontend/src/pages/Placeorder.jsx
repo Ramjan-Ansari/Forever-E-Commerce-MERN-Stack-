@@ -152,7 +152,7 @@ const Placeorder = () => {
           <Title text1={'PAYMENT'} text2={'METHOD'}/>
           {/* ------------payment method selection ---------- */}
           <div className='flex flex-col gap-3 lg:flex-row '>
-            <div onClick={() => toast.info("Stripe Payment is Not Available right now")} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
+            <div onClick={()=>setMethod('stripe')} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
               <p className={`min-w-3.5 h-3.5 border rounded-full ${ method === 'stripe'? 'bg-green-400': ''} `}></p>
               <img src={assets.stripe_logo} className='h-5 mx-4' alt="" />
             </div>
