@@ -21,11 +21,11 @@ const verifyStripe = async (req, res) =>{
             res.json({success: true})
         }else{
             await orderModel.findByIdAndDelete(orderId)
-            response.json({success:false})
+            res.json({success:false})
         }
     } catch (error) {
         console.log(error);
-        response.json({success: false, message:error.message})
+        res.json({success: false, message:error.message})
         
     }
 }
@@ -83,7 +83,7 @@ const placeOrderStripe = async (req, res) => {
         await newOrder.save();
 
         const line_items = items.map((item)=>({
-            price_date: {
+            price_data: {
                 currency: currency,
                 product_data: {
                     name: item.name
@@ -95,19 +95,19 @@ const placeOrderStripe = async (req, res) => {
         }))
 
         line_items.push({
-            price_date: {
+            price_data: {
                 currency: currency,
                 product_data: {
                     name: 'Delivery Charges'
                 },
                 unit_amount: DeliveryCharge * 100,
 
-            },
+            },      
             quantity: 1
         })
         const session  = await stripe.checkout.sessions.create({
-            success_url: `${origin}/verify?success=true$orderId=${newOrder._id}`,
-            cancel_url: `${origin}/verify?success=false$orderId=${newOrder._id}`,
+            success_url: `${origin}/verify?success=true&orderId=${newOrder._id}`,
+            cancel_url: `${origin}/verify?success=false&orderId=${newOrder._id}`,
             line_items,
             mode: 'payment',
         })
