@@ -5,6 +5,8 @@ It features **user authentication**, **product management**, **shopping cart**, 
 The **admin dashboard** allows efficient store management, including **order tracking** and **product uploads**.
 
 ---
+## Live Link: https://forever-frontend-rosy-eight.vercel.app/
+---
 
 ## 🔑 Key Features
 
