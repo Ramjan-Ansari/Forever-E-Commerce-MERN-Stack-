@@ -33,7 +33,7 @@ const Placeorder = () => {
     const options = {
       key: import.meta.env.VITE_RAZORPAY_KEY_ID,
       amount: order.amount,
-      currency: order.currenry,
+      currency: order.currency,
       name: 'Order Payment ',
       description: 'Order Payment',
       order_id : order.id,
@@ -100,7 +100,7 @@ const Placeorder = () => {
           }
           break;
         case 'razorpay':
-          const responseRazorpay = axios.post(backendUrl + '/api/order/razorpay', orderData, {headers:{token}})
+          const responseRazorpay = await axios.post(backendUrl + '/api/order/razorpay', orderData, {headers:{token}})
           if(responseRazorpay.data.success){
             initPay(responseRazorpay.data.order);
           }
@@ -156,7 +156,7 @@ const Placeorder = () => {
               <p className={`min-w-3.5 h-3.5 border rounded-full ${ method === 'stripe'? 'bg-green-400': ''} `}></p>
               <img src={assets.stripe_logo} className='h-5 mx-4' alt="" />
             </div>
-            <div onClick={()=>toast.info("Not Available right now")} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
+            <div onClick={()=>setMethod('razorpay')} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
               <p className={`min-w-3.5 h-3.5 border rounded-full ${ method === 'razorpay'? 'bg-green-400': ''} `}></p>
               <img src={assets.razorpay_logo} className='h-5 mx-4' alt="" />
             </div>
